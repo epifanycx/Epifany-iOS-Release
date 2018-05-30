@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-s.name             = 'Epifany'
-s.version          = '0.0.1'
-s.summary          = 'a simple survey SDK'
+  s.name             = 'Epifany'
+  s.version          = '0.0.2'
+  s.summary          = 'a simple survey SDK'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,22 +17,21 @@ s.summary          = 'a simple survey SDK'
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-s.description      = <<-DESC
+  s.description      = <<-DESC
 A easy to use survey tool using beacon technology.
-DESC
+                       DESC
 
-s.homepage         = 'https://github.com/stealzinc/Epifany-iOS-Release'
-s.license          = { :type => 'MIT', :file => 'LICENSE' }
-s.author           = { 'Shawn Murphy' => 'shawn.murphy@epifany.com' }
-s.source           = { :http => 'https://github.com/stealzinc/Epifany-iOS-Release/releases/download/0.0.1/EpifanyPod.zip'}
+  s.homepage         = 'https://github.com/stealzinc/Epifany-iOS-Release'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Shawn Murphy' => 'shawn.murphy@epifany.com' }
+  s.source           = { :http => 'https://github.com/stealzinc/Epifany-iOS-Release/releases/download/0.0.1/EpifanyPod.zip'}
 
-s.ios.deployment_target = '8.0'
-s.ios.vendored_frameworks = 'Epifany.framework',
-s.vendored_frameworks = 'ProximityKit.framework'
-
-s.dependency 'Balderdash', '0.0.3'
-s.dependency 'Moya'
-s.dependency 'Moya-ModelMapper', '6.0.0-beta.1'
-s.framework = 'CoreBluetooth', 'CoreLocation'
-s.library = 'sqlite3'
+  s.ios.deployment_target = '8.0'
+  s.ios.vendored_frameworks = 'Epifany.framework'
+  s.vendored_frameworks = 'ProximityKit.framework'
+  s.dependency 'Balderdash', '0.0.3'
+  s.dependency 'Moya' 
+  s.dependency 'Moya-ModelMapper', '6.0.0-beta.1'
+  s.framework = 'CoreBluetooth', 'CoreLocation'
+  s.library = 'sqlite3'
 end
