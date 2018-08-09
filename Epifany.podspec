@@ -24,7 +24,7 @@ A easy to use survey tool using beacon technology.
   s.homepage         = 'https://github.com/stealzinc/Epifany-iOS-Release'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Shawn Murphy' => 'shawn.murphy@epifany.com' }
-  s.source           = { :http => 'https://github.com/stealzinc/Epifany-iOS-Release/releases/download/0.0.4/EpifanyPod.zip'}
+  s.source           = { :http => 'https://github.com/stealzinc/Epifany-iOS-Release/releases/download/0.0.5/EpifanyPod.zip'}
 
   s.ios.deployment_target = '8.0'
   s.ios.vendored_frameworks = 'Epifany.framework'
