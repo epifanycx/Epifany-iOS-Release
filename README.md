@@ -28,9 +28,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
         6. [Open Question Tool](#open-question-tool)
     2. [Beacons](#beacons)
         1. [Start Beacon Monitoring](#start-beacon-monitoring)
-        2. [Adding a Delegate for UI Updates](#adding-a-delegate-for-ui-updates)
-        3. [Adding Background Delegate for Beacon Hits](#adding-background-delegate-for-beacon-hits)
-
+        2. [Beacon Options](#beacon-options)
+        3. [Adding a Delegate for UI Updates](#adding-a-delegate-for-ui-updates)
+        4. [Adding Background Delegate for Beacon Hits](#adding-background-delegate-for-beacon-hits)
+        3. [Error Handling](#error-handling)
 # Requirements
 
  - Location Permission is required to range beacons
@@ -97,13 +98,81 @@ location: CLLocation?, mobileOrder: Bool? completion: { (surveyController) in
     // Handle error message
 })
 ```
-### Finish a Question or Survey
-This is used to get the next question or end the survey. This function takes on of three
-parameters (String, Answer, \[Answer\]). The function will return the next question
-that should be displayed to the user. If the returned object is nil
-than the user is at the end of the survey, and you should call
-`surveyController.finishSurvey()`. The callback will let you know when we finished
-uploading to our server.
+
+Once you get a survey object you must first call `survey.getFirstQuestion()` to
+get the first question.
+ ```swift
+ let question = survey.firstQuestion()
+ ```
+ ### Question Types and Flow
+ 
+ When you get a question make sure you check the `question.type` to make sure you are present the right UI design. There are 3 `Question.Type` groups and a total of 7 `Question.Type\:
+ 1. Multiple Choice Questions
+ 1. `.multipleChoice` - A simple `UITableView` with single selection.
+ 2. `.mood` - A multiple choice question with some emojis or somethign with more character.
+ 3. `.slider` - A simple slider view where each value represents an answer.
+ 
+ 2. Open Answer Questions
+ 1. `.openAnswer` - A simple EditTextView that the user interacts.
+ 2. `.date` - Uses a date picker that submits the answer as a string in ISO8601 format.
+ 
+ 3. Multi-select Questions
+ 1. `.multiselect` - A simple `UITableView` with multi-selection
+ 2. `.product` - Preferably a Multi-select Dropdown menu
+ 
+ The best way to check for this is use a switch statement like this: 
+
+```swift
+switch question.type! {
+case .multipleChoice:
+// Get Multiple Choice View Controller
+case .openAnswer:
+// Get Open Answer View Controller
+case .mood:
+// Get Mood View Controller
+case .slider:
+// Get Slider View Controller
+case .date:
+// Get Date View Controller
+case .product:
+// Get Product View Controller
+case .multiselect:
+// Get Multi-select View Controller
+}
+
+```
+ 
+ Once the user selects/types and answer you must call `surveyController.nextQuestion()` to move to the next question. There are three different `surveyController.nextQuestion()` functions that each take
+ a different parameter (String, Answer, \[Answer\]. The Question types are broken up that each group uses the same `surveyController.nextQuestion()` method:
+ 
+ 1. Multiple Choice Questions
+ 
+ ```swift
+// Example that grabs first answer from Answers list
+let answer = questions.answers[0]
+let nextQuestion = surveyController.nextQuestion(answer)
+```
+
+2. Open Answer Questions
+
+```swift
+// Example with some text
+let answer = "Example Answer"
+let nextQuestion = surveyController.nextQuestion(answer)
+```
+
+3. Multi-select Questions
+
+```swift
+// Example that grabs first two answers from Answers list
+let answers = [Answer]()
+answers.append(question.answers[0])
+answers.append(question.answers[1])
+let nextQuestion = surveyController.nextQuestion(answers)
+```
+
+When `surveyController.nextQuestion()` returns `nil` this means the user has reached the end of the survey. At this time you should call `surveyController.finishSurvey()`. The `SurveyFinishCallback` will let you know when we finished uploading the survey to our server.
+
 ```swift
     // answer is either a String, Answer, or [Answer]
     if let question = surveyContorller.nextQuestion(answer: answer) {
@@ -116,27 +185,23 @@ uploading to our server.
     }
     }
 ```
-
-### Check Question Type
-The question type is used for different UI desgins and user interactions.
-```swift
-    question.type
-```
-Every question will have one of the following types:
-```
-1. "MoodQuestion"
-    2. "MultipleChoiceQuestion"
-    3. "SliderQuestion"
-    4. "DateQuestion"
-    5. "ProductQuestion"
-    6. "OpenQuestion"
-```
-
 ### Product Question Tool
-This tool is used to help populate answers when the user selects a
-value meal or combo on a product question. For Example: if the user selects
-"Cheeseburger Combo" this method will return a list with the objects,
-"Cheeseburger", "Fries", & "Drink".
+This tool is used to do three jobs:
+1. Hints - Some `.openAnswer` questions will have hints that are fired based on a word or set of words a user types. This should be display in a way to prompt the user to keep typing. (See below)
+
+    ![](hint.gif) 
+
+
+2. Gibberish - When a user types a sentence that is considered not English this will be fired
+This should be displayed in a way to let the user know they need to fix their answer. (See Below)
+
+    ![](gibberish.gif)
+
+
+3. Character Limit - Every `.openAnswer` question requires a minimum amount of characters. This will fire when the user's answer passes the minimum threshold or goes below the threshold. You can also get the minimum character limit using `question.characterLimit` and may be a good idea to display this to the user.
+
+The `EpifanyTextDelegate` is only fired when the state of gibberish, hints, or
+character limit reached has changed.
 ```swift
 // Whenever you select an answer pass it though our 
 // check to make sure it is not a bundle/group of 
@@ -182,14 +247,24 @@ character limit reached has changed.
     }
  }
 ```
-![](hint.gif) ![](gibberish.gif)
+
+You can choose to not use the `EpifanyTextDelegate` but you need to compare the length of the user's answer to  `question.characterLimit`. If the answer doesn't reach the minimum character limit it will cause an error when trying to post the survey.
 
 ## Beacons
 
 ### Start Beacon Monitoring
 This will allow the user to range beacons. Call this after you gain location permissons.
+
+### Beacon Options
+You can also pass a `[BeaconOptions: Int]` to modify how beacon monitoring will work. Current there are only two usable `BeaconOptions`:
+1. `.visits` - allows you to set the minimum number of visits before we notify the beacon delegates. Note: visits are based on days so when visits are set to 2 the delegates will be notified on the 2nd day they visit.
+2. `.sinceVisit` - allows you to set a delay for when the delegates get fired until x seconds after the user leaves the range of the beacon. This is  useful if you would prefer the user to finish their meal or time at the venue before getting the survey.
+These `BeaconOptions` can be used together as well.
+
 ```swift
     EpifanyController.shared.startMonitoringBeacons()
+    // with options
+    EpifanyController.shared.startMonitoringBeacons([.visits: 2, .sinceVisit: 60])
 ```
 
 ### Adding a Delegate for UI Updates
@@ -232,6 +307,37 @@ class AppDelegate: EpifanyBackgroundDelegate {
     //        ...
         }
     }
+}
+```
+
+## Error Handling
+We provided a simple `EpifanyError` object that is returned whenever we receive an error from our servers. This object contains the `status code` and the `error message` for you to look at. Here are a few of the common errors that you may want to handle:
+
+```swift
+// ...
+} failure: { (error) in
+if error.message == EpifanyError.noUser {
+// This mainly happens when we see a beacon before you provide us with the 
+//user's email. The simplest solution here is to just hit the checkForSurvey
+// with the user's email
+EpifanyController.shared.checkForSurvey(email: "userEmail", location: nil, mobileOrder: false, completion: { (available) in
+// Handle success
+}, failure: { (error) in
+//Handle error
+})
+}
+// ...
+if error.message == EpifanyError.noHost {
+// This is usually caused by the user having wifi / mobile data off.
+// Please prompt the user to turn on their wifi / mobile data.
+}
+// ...
+if error.message == EpifanyError.invaildAppToken {
+// This error only occurs if the app token you were provided is no longer
+// working. Contact us immediately if this is happening in a production 
+// build since the SDK will not work without a valid AppToken.
+}
+
 }
 ```
 ## Author
