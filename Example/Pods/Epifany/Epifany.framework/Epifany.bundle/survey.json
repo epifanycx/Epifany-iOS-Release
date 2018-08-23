@@ -1,0 +1,707 @@
+{
+    "survey": {
+        "points": 3,
+        "estimated_time": "1 min 0 sec",
+        "first_question_id": 63,
+        "auto_answer": true,
+        "questions": [{
+                      "id": 63,
+                      "type": "MoodQuestion",
+                      "text": "Please rate your experience at McDonald's - Western Blvd. today:",
+                      "role": "main",
+                      "multiple_choice_answers": [{
+                                                  "id": 162,
+                                                  "value": -1,
+                                                  "text": "Sad",
+                                                  "next_question_id": 3007,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 163,
+                                                  "value": 0,
+                                                  "text": "Indifferent",
+                                                  "next_question_id": 3008,
+                                                  "position": 1
+                                                  }, {
+                                                  "id": 164,
+                                                  "value": 1,
+                                                  "text": "Happy",
+                                                  "next_question_id": 3010,
+                                                  "position": 2
+                                                  }]
+                      }, {
+                      "id": 3007,
+                      "type": "OpenQuestion",
+                      "text": "We hold ourselves to higher standards. What was it that impacted your experience in a negative way?",
+                      "role": "follow_up",
+                      "hints": [{
+                                "hint": "What was bad about your food?",
+                                "keyword": "food"
+                                }, {
+                                "hint": "What was bad about the service?",
+                                "keyword": "service"
+                                }],
+                      "next_question_id": 3987,
+                      "character_limit": 6,
+                      "meta": {
+                      "text": "We hold ourselves to higher standards. What was it that impacted your experience in a negative way?"
+                      }
+                      }, {
+                      "id": 3010,
+                      "type": "OpenQuestion",
+                      "text": "You've made our day! What about your experience made you feel that way?",
+                      "role": "follow_up",
+                      "hints": [],
+                      "next_question_id": 4678,
+                      "character_limit": 6,
+                      "meta": {
+                      "text": "You've made our day! What about your experience made you feel that way?"
+                      }
+                      }, {
+                      "id": 4678,
+                      "type": "ProductQuestion",
+                      "text": "What is your go-to order at McDonald's - Western Blvd.? If you don't have one, what did you order today?",
+                      "role": "follow_up",
+                      "multiple_choice_answers": [{
+                                                  "id": 9500,
+                                                  "value": null,
+                                                  "text": "Big Mac Value Meal",
+                                                  "next_question_id": 3987,
+                                                  "position": 0,
+                                                  "bundle": [9354, 9359, 9426]
+                                                  }, {
+                                                  "id": 9343,
+                                                  "value": null,
+                                                  "text": "Apple Slices",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9344,
+                                                  "value": null,
+                                                  "text": "Artisan Grilled Chicken Sandwich",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9345,
+                                                  "value": null,
+                                                  "text": "Bacon Ranch Grilled Chicken Salad",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9346,
+                                                  "value": null,
+                                                  "text": "Bacon Ranch Grilled Salad",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9347,
+                                                  "value": null,
+                                                  "text": "Bacon Ranch Salad \u0026 Buttermilk Crispy Chicken",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9348,
+                                                  "value": null,
+                                                  "text": "Bacon, Egg \u0026 Cheese Bagel",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9349,
+                                                  "value": null,
+                                                  "text": "Bacon, Egg \u0026 Cheese Biscuit",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9350,
+                                                  "value": null,
+                                                  "text": "Bacon, Egg \u0026 Cheese McGriddles",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9351,
+                                                  "value": null,
+                                                  "text": "Baked Apple Pie",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9352,
+                                                  "value": null,
+                                                  "text": "Big Breakfast",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9353,
+                                                  "value": null,
+                                                  "text": "Big Breakfast With Hotcakes",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9354,
+                                                  "value": null,
+                                                  "text": "Big Mac",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9355,
+                                                  "value": null,
+                                                  "text": "Buttermilk Crispy Chicken Sandwich",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9356,
+                                                  "value": null,
+                                                  "text": "Cheeseburger",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9357,
+                                                  "value": null,
+                                                  "text": "Chicken McNuggets",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9358,
+                                                  "value": null,
+                                                  "text": "Chocolate Chip Cookie",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9359,
+                                                  "value": null,
+                                                  "text": "Coca-Cola",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9360,
+                                                  "value": null,
+                                                  "text": "Cuties",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9361,
+                                                  "value": null,
+                                                  "text": "Dasani Water",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9362,
+                                                  "value": null,
+                                                  "text": "Diet Coke",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9363,
+                                                  "value": null,
+                                                  "text": "Diet Dr Pepper",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9364,
+                                                  "value": null,
+                                                  "text": "Double Cheesburger",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9365,
+                                                  "value": null,
+                                                  "text": "Double Quarter Pounder With Cheese",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9366,
+                                                  "value": null,
+                                                  "text": "Dr Pepper",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9367,
+                                                  "value": null,
+                                                  "text": "Egg McMuffin",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9368,
+                                                  "value": null,
+                                                  "text": "Egg White Delight McMuffin",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9369,
+                                                  "value": null,
+                                                  "text": "Fat Free Chocolate Milk Jug",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9370,
+                                                  "value": null,
+                                                  "text": "Filet-O-Fish",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9371,
+                                                  "value": null,
+                                                  "text": "Fruit 'N Yogurt Parfait",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9372,
+                                                  "value": null,
+                                                  "text": "Fruit \u0026 Maple Oatmeal",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9373,
+                                                  "value": null,
+                                                  "text": "Hamburger",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9374,
+                                                  "value": null,
+                                                  "text": "Hash Browns",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9375,
+                                                  "value": null,
+                                                  "text": "Hi-C Orange Lavaburst",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9376,
+                                                  "value": null,
+                                                  "text": "Hot Caramel Sundae",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9377,
+                                                  "value": null,
+                                                  "text": "Hot Fudge Sundae",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9378,
+                                                  "value": null,
+                                                  "text": "Hotcakes And Sausage",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9379,
+                                                  "value": null,
+                                                  "text": "Iced Tea",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9380,
+                                                  "value": null,
+                                                  "text": "Kiddie Cone",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9381,
+                                                  "value": null,
+                                                  "text": "McCafe Caramel Mocha",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9382,
+                                                  "value": null,
+                                                  "text": "McCafe Chocolate Shake",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9383,
+                                                  "value": null,
+                                                  "text": "McCafe Coffee",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9384,
+                                                  "value": null,
+                                                  "text": "McCafe Espresso",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9385,
+                                                  "value": null,
+                                                  "text": "McCafe Frappe Caramel",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9386,
+                                                  "value": null,
+                                                  "text": "McCafe Frappe Chocolate Chip",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9387,
+                                                  "value": null,
+                                                  "text": "McCafe Frappe Mocha",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9388,
+                                                  "value": null,
+                                                  "text": "McCafe Hot Chocolate",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9389,
+                                                  "value": null,
+                                                  "text": "McCafe Iced Caramel Mocha",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9390,
+                                                  "value": null,
+                                                  "text": "McCafe Iced Coffee",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9391,
+                                                  "value": null,
+                                                  "text": "McCafe Iced Mocha",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9392,
+                                                  "value": null,
+                                                  "text": "McCafe Latte",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9393,
+                                                  "value": null,
+                                                  "text": "McCafe Mango Pineapple Smoothie",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9394,
+                                                  "value": null,
+                                                  "text": "McCafe Mocha",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9395,
+                                                  "value": null,
+                                                  "text": "McCafe Peppermint Mocha",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9396,
+                                                  "value": null,
+                                                  "text": "McCafe Strawberry Banana Smoothie",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9397,
+                                                  "value": null,
+                                                  "text": "McCafe Strawberry Shake",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9398,
+                                                  "value": null,
+                                                  "text": "McCafe Vanilla Shake",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9399,
+                                                  "value": null,
+                                                  "text": "McCafe White Hot Chocolate",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9400,
+                                                  "value": null,
+                                                  "text": "McChicken",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9401,
+                                                  "value": null,
+                                                  "text": "McDouble",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9402,
+                                                  "value": null,
+                                                  "text": "McFlurry",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9403,
+                                                  "value": null,
+                                                  "text": "McFlurry With M\u0026Ms",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9404,
+                                                  "value": null,
+                                                  "text": "McFlurry With Oreo Cookies",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9405,
+                                                  "value": null,
+                                                  "text": "Minute Maid Apple Juice Box",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9406,
+                                                  "value": null,
+                                                  "text": "Oatmeal Raisin Cookie",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9407,
+                                                  "value": null,
+                                                  "text": "Peppermint Hot Chocolate",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9408,
+                                                  "value": null,
+                                                  "text": "Powerade Mountain Berry Blast",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9409,
+                                                  "value": null,
+                                                  "text": "Quarter Pounder With Cheese",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9410,
+                                                  "value": null,
+                                                  "text": "Sausage Biscuit",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9411,
+                                                  "value": null,
+                                                  "text": "Sausage Biscuit With Egg",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9412,
+                                                  "value": null,
+                                                  "text": "Sausage Burrito",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9413,
+                                                  "value": null,
+                                                  "text": "Sausage McGriddles",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9414,
+                                                  "value": null,
+                                                  "text": "Sausage McMuffin",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9415,
+                                                  "value": null,
+                                                  "text": "Sausage McMuffin With Egg",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9416,
+                                                  "value": null,
+                                                  "text": "Sausage, Egg \u0026 Cheese McGriddles",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9417,
+                                                  "value": null,
+                                                  "text": "Side Salad",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9418,
+                                                  "value": null,
+                                                  "text": "Southwest Buttermilk Crispy Chicken Salad",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9419,
+                                                  "value": null,
+                                                  "text": "Southwest Grilled Chicken Salad",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9420,
+                                                  "value": null,
+                                                  "text": "Sprite",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9421,
+                                                  "value": null,
+                                                  "text": "Steak, Egg \u0026 Cheese Biscuit",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9422,
+                                                  "value": null,
+                                                  "text": "Strawberry \u0026 Creme Pie",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9423,
+                                                  "value": null,
+                                                  "text": "Strawberry Sundae",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9424,
+                                                  "value": null,
+                                                  "text": "Sweet Tea",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9425,
+                                                  "value": null,
+                                                  "text": "Vanilla Cone",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9426,
+                                                  "value": null,
+                                                  "text": "French Fries",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9427,
+                                                  "value": null,
+                                                  "text": "Yoplait Go-Gurt Low Fat Strawberry Yogurt",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9428,
+                                                  "value": null,
+                                                  "text": "Maple Bacon Dijon Burger",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9429,
+                                                  "value": null,
+                                                  "text": "Pico Guacamole Burger",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9430,
+                                                  "value": null,
+                                                  "text": "Sweet BBQ Bacon Burger",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9431,
+                                                  "value": null,
+                                                  "text": "Maple Bacon Dijon Chicken Sandwich",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9432,
+                                                  "value": null,
+                                                  "text": "Pico Guacamole Chicken Sandwich",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 9433,
+                                                  "value": null,
+                                                  "text": "Sweet BBQ Bacon Chicken Sandwich",
+                                                  "next_question_id": 3987,
+                                                  "position": 0
+                                                  }]
+                      }, {
+                      "id": 3008,
+                      "type": "OpenQuestion",
+                      "text": "Sounds like we could have been better today. Any suggestions?",
+                      "role": "follow_up",
+                      "hints": [],
+                      "next_question_id": 4678,
+                      "character_limit": 2,
+                      "meta": {
+                      "text": "Sounds like we could have been better today. Any suggestions?"
+                      }
+                      }, {
+                      "id": 3987,
+                      "type": "MultipleChoiceQuestion",
+                      "text": "Please select your order type:",
+                      "role": "main",
+                      "multiple_choice_answers": [{
+                                                  "id": 7901,
+                                                  "value": 1,
+                                                  "text": "Dine-in",
+                                                  "next_question_id": 3004,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 7902,
+                                                  "value": 2,
+                                                  "text": "Drive-thru",
+                                                  "next_question_id": 11846,
+                                                  "position": 1
+                                                  }, {
+                                                  "id": 7903,
+                                                  "value": 3,
+                                                  "text": "Carry out",
+                                                  "next_question_id": 3004,
+                                                  "position": 2
+                                                  }]
+                      }, {
+                      "id": 3004,
+                      "type": "MultipleChoiceQuestion",
+                      "text": "Was our venue clean?",
+                      "role": "follow_up",
+                      "multiple_choice_answers": [{
+                                                  "id": 6847,
+                                                  "value": 1,
+                                                  "text": "Yes",
+                                                  "next_question_id": 11846,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 6848,
+                                                  "value": -1,
+                                                  "text": "No",
+                                                  "next_question_id": 3003,
+                                                  "position": 1
+                                                  }]
+                      }, {
+                      "id": 3003,
+                      "type": "OpenQuestion",
+                      "text": "What was not as clean as it should have been \u0026 how so?",
+                      "role": "follow_up",
+                      "hints": [],
+                      "next_question_id": 11846,
+                      "character_limit": 6
+                      }, {
+                      "id": 11846,
+                      "type": "MultipleChoiceQuestion",
+                      "text": "Was your order correct and complete?",
+                      "role": "main",
+                      "multiple_choice_answers": [{
+                                                  "id": 19097,
+                                                  "value": 1,
+                                                  "text": "Yes",
+                                                  "next_question_id": null,
+                                                  "position": 0
+                                                  }, {
+                                                  "id": 19098,
+                                                  "value": -1,
+                                                  "text": "No",
+                                                  "next_question_id": 11845,
+                                                  "position": 1
+                                                  }]
+                      }, {
+                      "id": 11845,
+                      "type": "OpenQuestion",
+                      "text": "Sounds like we let you down. What was wrong with your order today?",
+                      "role": "follow_up",
+                      "hints": [],
+                      "next_question_id": null,
+                      "character_limit": 10
+                      }]
+    }
+}

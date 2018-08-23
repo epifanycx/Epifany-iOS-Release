@@ -1,0 +1,15 @@
+
+platform :ios, '9.0'
+
+use_frameworks!
+
+target 'Example' do
+  pod 'Epifany'
+end
+
+target 'ExampleTests' do
+    inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'Epifany'
+end

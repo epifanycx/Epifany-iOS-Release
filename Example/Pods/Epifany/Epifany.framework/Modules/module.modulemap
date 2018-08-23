@@ -1,0 +1,11 @@
+framework module Epifany {
+  umbrella header "Epifany-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Epifany.Swift {
+    header "Epifany-Swift.h"
+    requires objc
+}

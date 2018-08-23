@@ -1,0 +1,6 @@
+framework module Balderdash {
+  umbrella header "Balderdash-umbrella.h"
+
+  export *
+  module * { export * }
+}
