@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Epifany'
-  s.version          = '0.0.5'
+  s.version          = '0.1.0'
   s.summary          = 'a simple survey SDK'
 
 # This description is used to generate tags and improve search results.
@@ -34,4 +34,4 @@ A easy to use survey tool using beacon technology.
   s.dependency 'Moya-ModelMapper', '6.0.0-beta.1'
   s.framework = 'CoreBluetooth', 'CoreLocation'
   s.library = 'sqlite3'
-end
+end:
