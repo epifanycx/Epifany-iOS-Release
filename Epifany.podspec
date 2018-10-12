@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Epifany'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'a simple survey SDK'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ A easy to use survey tool using beacon technology.
   s.homepage         = 'https://github.com/stealzinc/Epifany-iOS-Release'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Shawn Murphy' => 'shawn.murphy@epifany.com' }
-  s.source           = { :http => 'https://github.com/stealzinc/Epifany-iOS-Release/releases/download/0.0.5/EpifanyPod.zip'}
+  s.source           = { :http => 'https://github.com/stealzinc/Epifany-iOS-Release/releases/download/0.1.3/EpifanyPod.zip'}
 
   s.ios.deployment_target = '8.0'
   s.ios.vendored_frameworks = 'Epifany.framework'
@@ -34,4 +34,4 @@ A easy to use survey tool using beacon technology.
   s.dependency 'Moya-ModelMapper', '6.0.0-beta.1'
   s.framework = 'CoreBluetooth', 'CoreLocation'
   s.library = 'sqlite3'
-end:
+end
